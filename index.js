@@ -9,6 +9,7 @@ const Config = require("./config.json");
 })();
 
 async function testAave() {
+  console.log(`Using ${Config.address}`);
   const reservesList = await Aave.getReservesList(
     Config.chain,
     Config.infuraKey
@@ -97,6 +98,7 @@ async function testAave() {
 }
 
 async function testCompound() {
+  console.log(`Using ${Config.address1}`);
   const collateral_token = "0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa";
   const borrow_token = "0x0000000000000000000000000000000000000000";
 
